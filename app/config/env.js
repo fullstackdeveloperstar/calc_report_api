@@ -1,12 +1,11 @@
 /**
- * Copyright by https://loizenai.com
- * youtube loizenai
+ * Copyright by Felipe Mantilla Gomez
  */
 
 const env = {
-  database: 'loizenaidb',
+  database: 'calculation_report',
   username: 'postgres',
-  password: '123',
+  password: 'password',
   host: 'localhost',
   dialect: 'postgres',
   pool: {

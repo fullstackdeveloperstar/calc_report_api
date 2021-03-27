@@ -1,6 +1,5 @@
 /**
- * Copyright by https://loizenai.com
- * youtube loizenai
+ * Copyright by Felipe Mantilla Gomez
  */
 
 const db = require('../config/db.config.js');

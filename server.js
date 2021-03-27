@@ -1,6 +1,5 @@
 /**
- * Copyright by https://loizenai.com
- * youtube loizenai
+ * Copyright by Felipe.
  */
 
 const express = require('express');
@@ -35,3 +34,5 @@ const server = app.listen(8080, function () {
  
   console.log("App listening at http://%s:%s", host, port); 
 })
+
+

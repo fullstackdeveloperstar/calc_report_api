@@ -1,0 +1,24 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "blackdove",
+            "database": "blackdove-local",
+            "username": "blackdove",
+            "password": "Passw0rd"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "calculation report",
+            "database": "calculation_report",
+            "username": "postgres",
+            "password": "password"
+        }
+    ]
+}
