@@ -179,7 +179,11 @@ exports.create = (req, res) => {
 
 exports.retrieveAllComparisons = (req, res) => {
     // find all Comparison information from 
-    Comparison.findAll()
+    Comparison.findAll({
+        order: [
+            ['id', 'ASC'],
+        ],
+    })
         .then(comparisonInfos => {
             res.status(200).json({
                 message: "Get all Comparisons' Infos Successfully!",
@@ -195,4 +199,38 @@ exports.retrieveAllComparisons = (req, res) => {
                 error: error
             });
         });
+}
+
+exports.update = (req, res) => {
+    const id = req.params.id;
+
+    Comparison.update(req.body, {
+        where: { id: id }
+    })
+        .then(num => {
+            if(num == 1) res.send({message: 'Updated successfully.'});
+            else res.send({message: 'Cannot update'});
+        })
+        .catch(err => {
+            res.status(500).send({
+                message: 'Error updating with id = ' + id
+            });
+        });
+}
+
+exports.addNew = (req, res) => {
+    try {
+        const comparison = {};
+        Comparison.create(comparison).then(result => {
+            res.status(200).json({
+                data: result,
+                message: "New Row added!",
+            });
+        });
+    } catch (error) {
+        res.status(500).json({
+            message: "Fail!",
+            error: error.message
+        });
+    }
 }
