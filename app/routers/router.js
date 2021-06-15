@@ -16,6 +16,7 @@ router.get('/api/comparisons/create', comparisons.create);
 router.get('/api/comparisons/all', comparisons.retrieveAllComparisons);
 router.put('/api/comparisons/update/:id', comparisons.update);
 router.post('/api/comparisons/addnew', comparisons.addNew);
+router.delete('/api/comparisons/delete/:id', comparisons.delete);
 
 router.get('/api/materials/create', materials.create);
 router.get('/api/materials/all', materials.getAll);
@@ -25,5 +26,6 @@ router.get('/api/prices/all', prices.getAll);
 
 router.get('/api/material_name_ares/create', material_name_area.create);
 router.get('/api/material_name_ares/all', material_name_area.getAll);
+router.get('/api/material_name_ares/add_additional', material_name_area.addAdditional);
 
 module.exports = router;
