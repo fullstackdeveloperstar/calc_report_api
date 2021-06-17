@@ -67,26 +67,29 @@
  exports.addAdditional = (req, res) => {
     let additionalData = [
         {
-            customer_type: 'Commercial GC',
-            material_name_area: 'Daltile Ash Grey 2CM & NQ06 Calacatta',
-        },
-        {
-            customer_type: 'Commercial GC',
-            material_name_area: 'White Mountain',
-        },
-        {
             customer_type: 'Commercial Millwork',
-            material_name_area: 'Opustone Black Absolute',
+            material_name_area: 'Quartz Q4042 Trail Ridge 2CM',
         },
         {
             customer_type: 'Commercial GC',
-            material_name_area: 'Quartz NQ12 Statuary',
+            material_name_area: 'AIA-Quartzite Taj Mahal',
+        },
+        {
+            customer_type: 'Residential',
+            material_name_area: 'Ubatua',
+        },
+        {
+            customer_type: 'Builder',
+            material_name_area: 'Celebrate VA Premiers III - Meridian Grey (for material name Other Areas)',
+        },
+        {
+            customer_type: 'Builder',
+            material_name_area: 'Windsor Manor (WM) - Granite - Ubatuba',
         }
     ];
-
+    
     additionalData.map(row => {
-        MaterialNameArea.create(row).then(result => {
-        });
+        MaterialNameArea.create(row).then(result => {});
     });
 
     res.status(200).json({
