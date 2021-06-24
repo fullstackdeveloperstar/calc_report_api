@@ -11,6 +11,7 @@ const comparisons = require('../controllers/comparison.controller.js');
 const materials = require('../controllers/material.controller.js');
 const prices = require('../controllers/price.controller.js');
 const material_name_area = require('../controllers/material_name_area.controller.js');
+const jobstatus = require('../controllers/jobstatus.controller.js');
 
 router.get('/api/comparisons/create', comparisons.create);
 router.get('/api/comparisons/all', comparisons.retrieveAllComparisons);
@@ -28,4 +29,7 @@ router.get('/api/material_name_ares/create', material_name_area.create);
 router.get('/api/material_name_ares/all', material_name_area.getAll);
 router.get('/api/material_name_ares/add_additional', material_name_area.addAdditional);
 
+router.get('/api/jobstatus/all', jobstatus.getAll);
+router.post('/api/jobstatus/add', jobstatus.add);
+router.put('/api/jobstatus/:id/update', jobstatus.update);
 module.exports = router;
